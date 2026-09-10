@@ -31,3 +31,14 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Docker Data Directory ###
+.data/
+
+### OS Generated Files ###
+.DS_Store
+Thumbs.db
+
+### Log Files ###
+*.log
+logs/

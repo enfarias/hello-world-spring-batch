@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 public class BatchConfig {
 
 	@Bean
-	public Job job(JobRepository jobRepository, Step printHelloStep) {
+	Job job(JobRepository jobRepository, Step printHelloStep) {
 		return new JobBuilder("job", jobRepository)
 				.start(printHelloStep)
 				.incrementer(new RunIdIncrementer())

@@ -12,7 +12,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 public class PrintHelloStepConfig {
 
 	@Bean
-	public Step printHelloStep(JobRepository jobRepository, PlatformTransactionManager transactionManager, Tasklet printHelloTasklet) {
+	Step printHelloStep(JobRepository jobRepository, PlatformTransactionManager transactionManager, Tasklet printHelloTasklet) {
 		return new StepBuilder("printHelloStep", jobRepository)
 				.tasklet(printHelloTasklet, transactionManager).build();
 	}	
